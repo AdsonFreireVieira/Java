@@ -1,6 +1,5 @@
 package streams;
 
-import java.nio.file.spi.FileSystemProvider;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
