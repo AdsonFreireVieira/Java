@@ -1,24 +1,53 @@
 package File;
 
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
 
 public class FileMain {
 
 
 	public static void main(String [] args){
 		
-		//Path diretorio = Paths.get("C:/Users/adson/OneDrive/Documentos/Projeto");
-	    Path arquivo = Paths.get("C:/Users/adson/OneDrive/Documentos/Projeto/Documento4.doc");
+		Scanner sc = new Scanner(System.in);
 		
-		if(Files.isDirectory(arquivo)) {
-			System.out.println("diretorio  Existe");
-		}
 		
-		else if(Files.exists(arquivo)){
+		List<Produto> list = new ArrayList<>();
+		
+		System.out.println("enter Caminho");
+		
+		String sourceFilestr  = sc.nextLine();
+		
+		File sourceFile = new File(sourceFilestr);
+		
+		String sourceFolder = sourceFile.getParent();
+		
+		
+		System.out.println(sourceFolder);
+		
+		boolean sucess = new File(sourceFolder +"//out").mkdir();
+		System.out.println("Folder Created "+sucess);
+		
+		String targetFile = sourceFolder+ "//out/summary.csv";
+		
+		try(BufferedReader br =new  BufferedReader(new FileReader(sourceFile))){
+				String itemcsv = br.readLine();
+				
+				while(itemcsv != null) {
+					System.out.println(itemcsv);
+					
+					itemcsv = br.readLine();
+				}
 			
-			System.out.println("E arquivo");
 		}
+	     catch(IOException e) {
+	    	 System.out.println(e);
+		}
+		
+		sc.close();
 	}
 }
