@@ -38,8 +38,14 @@ public class FileMain {
 				String itemcsv = br.readLine();
 				
 				while(itemcsv != null) {
-					System.out.println(itemcsv);
+		
+					String[] fields =itemcsv.split(",");
 					
+					String nome = fields[0];
+					double preco = Double.parseDouble(fields[1]);
+					int quantidade = Integer.parseInt(fields[2]);
+					
+					list.add(new Produto(nome, preco, quantidade));
 					itemcsv = br.readLine();
 				}
 			
