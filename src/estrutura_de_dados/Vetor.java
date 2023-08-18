@@ -25,6 +25,5 @@ public class Vetor {
 		
 		System.out.println("=================================int==============");
 		
-		
 	}
 }
