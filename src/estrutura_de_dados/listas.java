@@ -18,6 +18,9 @@ public class listas {
 		
 		for (listObjeto  lobj: lista) {
 			
+			
+			if(lobj.getNome().equalsIgnoreCase("Mari"))
+			{System.out.println("Amor do Papai");}
 			System.out.println(lobj.toString());
 		}
 	}
