@@ -44,12 +44,10 @@ public class StringgCompare {
 	    	System.out.println("Primeiras 5 of s3 and s4 match");
 	    }
 	    
-	    //ignira  maiusculas de minidculas
+	    //ignira  maiusculas de minidculas 
        if(s3.regionMatches(true, 0, s4, 0, 5)) {
     	   
        }
 	}
 }
 	
-
-}
