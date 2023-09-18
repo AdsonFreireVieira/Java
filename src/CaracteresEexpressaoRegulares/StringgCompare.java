@@ -35,8 +35,21 @@ public class StringgCompare {
 	    System.out.printf("compare" + s3.compareTo(s4));
 	    System.out.printf("compare" + s4.compareTo(s3));
 
-
-
+    
+	    System.out.println("REgion  Matches==================");
+	    
+	    // Ditingue maiuscula  de minusculas
+	    if(s3.regionMatches(0, s4, 0, 5)) {
+	    	
+	    	System.out.println("Primeiras 5 of s3 and s4 match");
+	    }
+	    
+	    //ignira  maiusculas de minidculas
+       if(s3.regionMatches(true, 0, s4, 0, 5)) {
+    	   
+       }
 	}
+}
+	
 
 }
