@@ -28,7 +28,7 @@ public class Regex2 {
 				//  pega posicao System.out.print(matcher.start()+"  ");
 				                          // mather.start(); Busca Posicao
 				                          // matcher.group() + agrupa os elementos capturados
-			     System.out.println(matcher.start()+" " + matcher.group()+"\n");
+			     System.out.println(matcher.start()+" " + matcher.group()+ "  ");
 	}
 
 }
