@@ -1,29 +1,32 @@
 package Collections_Java;
 
-import java.time.LocalDate;
 import java.util.HashSet;
+import java.util.Set;
 
 public class HashCollections {
 	
-	public static void main(String []args) {
+   public static void main(String []args) {
 		
 		
-		LocalDate date = LocalDate.now();
-		HashSet<String>hs = new HashSet<String>();
+		
+		Set<String>hs = new HashSet<String>();
 	   
 		 hs.add("BMW");
 		 hs.add("CHEVROLET");
 		 hs.add("FIAT");
-		 hs.add(" ");
+		 hs.add("");
 		 hs.add("VOLKSWAGEN");
 		 hs.add("CHRYSLER");
 		 
-		 
-	for (String s : hs) {
+		   
+    
+    
+    System.out.println(hs.toString());
+    System.out.println(hs.size());
+    
+ 
+ 
 		
-		System.out.println(s +  date.;
 	}
-		
-	}
-
+   
 }
